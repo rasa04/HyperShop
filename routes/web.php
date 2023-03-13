@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+use  App\Http\Controllers\StoreController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/cart', [IndexController::class, 'cart'])->name('cart');
+Route::get('/checkout', [IndexController::class, 'checkout'])->name('checkout');
+Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
+
+Route::resource('/blog', BlogController::class);
+
+Route::resource('/shop', StoreController::class);
