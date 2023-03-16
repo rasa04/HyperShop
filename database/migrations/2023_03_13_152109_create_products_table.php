@@ -18,10 +18,14 @@ return new class extends Migration
             $table->string('about')->nullable();
             $table->string('amount')->nullable();
             $table->integer('price')->nullable();
+            $table->string('photo')->nullable();
+            $table->integer('quantity')->nullable();
             $table->integer('brandId')->unsigned()->nullable();
+            $table->integer('categoryId')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('brandId')->references('id')->on('brands');
+            $table->foreign('categoryId')->references('id')->on('categories');
         });
     }
 

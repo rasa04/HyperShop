@@ -15,12 +15,3 @@ use App\Http\Controllers\BlogController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/cart', [IndexController::class, 'cart'])->name('cart');
-Route::get('/checkout', [IndexController::class, 'checkout'])->name('checkout');
-Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
-
-Route::resource('/blog', BlogController::class);
-
-Route::resource('/shop', StoreController::class);
