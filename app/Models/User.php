@@ -17,12 +17,33 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'display_name',
-        'username',
-        'email',
-        'password',
-    ];
+
+    protected $guarded = false;
+
+//    protected $fillable = [
+//        'display_name',
+//        'username',
+//        'email',
+//        'password',
+//    ];
+
+    // Получение название гендера вместо цифр
+    const GENDER_MALE = 1;
+    const GENDER_FEMALE = 2;
+
+    static function getGenders() : array
+    {
+        return [
+            self::GENDER_MALE => 'Male',
+            self::GENDER_FEMALE => 'Female',
+        ];
+    }
+
+    public function getGenderTitleAttribute() : string
+    {
+        return self::getGenders()[$this->gender] ?? false;
+    }
+    //
 
     /**
      * The attributes that should be hidden for serialization.

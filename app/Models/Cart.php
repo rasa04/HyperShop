@@ -17,7 +17,7 @@ class Cart extends Model
 
     public function products() : HasOne
     {
-        return $this->hasOne(Products::class);
+        return $this->hasOne(Product::class);
     }
 
     public function user() : HasOne

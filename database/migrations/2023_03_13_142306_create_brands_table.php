@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->timestamps();
         });
     }
 

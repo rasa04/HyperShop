@@ -16,16 +16,15 @@ return new class extends Migration
             $table->increments('id')->unsigned();
             $table->string('name')->nullable();
             $table->string('about')->nullable();
-            $table->string('amount')->nullable();
+            $table->integer('quantity')->nullable();
             $table->integer('price')->nullable();
             $table->string('photo')->nullable();
-            $table->integer('quantity')->nullable();
-            $table->integer('brandId')->unsigned()->nullable();
-            $table->integer('categoryId')->unsigned()->nullable();
+            $table->integer('brand_id')->unsigned()->nullable();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('brandId')->references('id')->on('brands');
-            $table->foreign('categoryId')->references('id')->on('categories');
+            $table->foreign('brand_id')->references('id')->on('brands');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

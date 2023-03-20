@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Category;
-use App\Models\Products;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -14,7 +14,7 @@ class IndexController extends Controller
     {
         $brands = Brand::all();
         $categories = Category::all();
-        $products = Products::where('price', '>', 10)->take(6)->get();
+        $products = Product::where('price', '>', 10)->take(6)->get();
 
         $data = [
             'brands' => $brands,
