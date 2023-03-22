@@ -19,6 +19,6 @@ class UpdateController extends Controller
 
         $category->update($data);
 
-        return view('category.show', compact('category'));
+        return to_route('category.show', $category->id);
     }
 }

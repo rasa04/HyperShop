@@ -18,6 +18,6 @@ class UpdateController extends Controller
 
         $user->update($data);
 
-        return view('user.show', compact('user'));
+        return to_route('user.show', $user->id);
     }
 }

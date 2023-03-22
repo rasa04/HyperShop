@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
@@ -12,6 +14,8 @@ class CreateController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('product.create');
+        $brands = Brand::all();
+        $categories = Category::all();
+        return view('product.create', compact('brands', 'categories'));
     }
 }

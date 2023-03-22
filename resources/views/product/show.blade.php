@@ -1,23 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Product</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Main</li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-
+@include('partials.navigation')
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
@@ -36,8 +19,9 @@
                         </div>
 
                         <div class="card-body table-responsive p-0">
-                            <img width="191" height="206" src="{{ Storage::url($product->photo) }}">
-                            <img src="{{ $product->photo }}" alt="временно для разработки что бы фото из сидера показывать">
+                            @foreach($product->images as $image)
+                                <img width="191" height="206" src="{{ Storage::url($image) }}">
+                            @endforeach
                             <table class="table table-hover text-nowrap">
                                 <tbody>
                                     <tr>
@@ -62,11 +46,11 @@
                                     </tr>
                                     <tr>
                                         <td>Category</td>
-                                        <td>{{ $product->getRelatedCategory()->name ?? 'no' }}</td>
+                                        <td>{{ $product->category->name ?? 'no' }}</td>
                                     </tr>
                                     <tr>
                                         <td>Brand</td>
-                                        <td>{{ $product->getRelatedBrand()->name ?? 'no' }}</td>
+                                        <td>{{ $product->brand->name ?? 'no' }}</td>
                                     </tr>
                                 </tbody>
                             </table>

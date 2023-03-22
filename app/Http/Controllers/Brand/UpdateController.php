@@ -18,6 +18,6 @@ class UpdateController extends Controller
 
         $brand->update($data);
 
-        return view('brand.show', compact('brand'));
+        return to_route('brand.show', $brand->id);
     }
 }

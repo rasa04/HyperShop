@@ -15,10 +15,9 @@ return new class extends Migration
             // review later nullable property
             $table->increments('id')->unsigned();
             $table->string('name')->nullable();
-            $table->string('about')->nullable();
+            $table->text('about')->nullable();
             $table->integer('quantity')->nullable();
             $table->integer('price')->nullable();
-            $table->string('photo')->nullable();
             $table->integer('brand_id')->unsigned()->nullable();
             $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();

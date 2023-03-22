@@ -18,6 +18,6 @@ class StoreController extends Controller
 
         Brand::firstOrCreate($data);
 
-        return redirect()->route('brand.index');
+        return to_route('brand.index');
     }
 }

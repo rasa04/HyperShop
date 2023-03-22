@@ -17,13 +17,13 @@ class CartFactory extends Factory
      */
     public function definition(): array
     {
-        $userId = DB::table('users')->pluck('id');
-        $productId = DB::table('products')->pluck('id');
+        $user_id = DB::table('users')->pluck('id');
+        $product_id = DB::table('products')->pluck('id');
 
         foreach (range(1,100) as $index) {
             DB::table('carts')->insert([
-                'userId' => fake()->randomElement($userId),
-                'productId' => fake()->randomElement($productId),
+                'userId' => fake()->randomElement($user_id),
+                'productId' => fake()->randomElement($product_id),
             ]);
         }
         return [

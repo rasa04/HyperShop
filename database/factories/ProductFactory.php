@@ -28,10 +28,9 @@ class ProductFactory extends Factory
                 'about' => fake()->text(200),
                 'quantity' => fake()->numberBetween(0, 100),
                 'price' => fake()->numberBetween(10, 1000),
-                'photo' => fake()->imageUrl(191, 206),
                 'brand_id' => fake()->randomElement($brandsId),
                 'category_id' => fake()->randomElement($categoriesId),
-                'created_at' => fake()->dateTime(),
+                'created_at' => fake()->dateTimeBetween($startDate = '-1 years'),
             ]);
         }
         return [

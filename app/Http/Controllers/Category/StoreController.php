@@ -18,6 +18,6 @@ class StoreController extends Controller
 
         Category::firstOrCreate($data);
 
-        return redirect()->route('category.index');
+        return to_route('category.index');
     }
 }

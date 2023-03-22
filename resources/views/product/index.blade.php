@@ -1,21 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Products</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Main</li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+@include('partials.navigation')
 
     <!-- Main content -->
     <section class="content">
@@ -34,9 +19,11 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>About</th>
                                     <th>Quantity</th>
                                     <th>Price</th>
+                                    <th>Category</th>
+                                    <th>Brand</th>
+                                    <th>About</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,9 +33,11 @@
                                     <td>
                                         <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                                     </td>
-                                    <td>{{ $product->about }}</td>
                                     <td>{{ $product->quantity }}</td>
                                     <td>{{ $product->price }}</td>
+                                    <td>{{ $product->category->name ?? '-' }}</td>
+                                    <td>{{ $product->brand->name ?? '-' }}</td>
+                                    <td>{{ $product->about }}</td>
                                 </tr>
                                 @endforeach
                                 </tbody>

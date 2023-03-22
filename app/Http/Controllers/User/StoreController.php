@@ -22,6 +22,6 @@ class StoreController extends Controller
             'email' => $data['email'],
         ], $data);
 
-        return redirect()->route('user.index');
+        return to_route('user.index');
     }
 }

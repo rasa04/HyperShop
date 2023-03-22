@@ -4,43 +4,33 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
  * @mixin Builder
+ * @property mixed $photo
  */
 class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'about',
-        'amount',
-        'price',
-        'brandId',
-        'quantity',
-        'photo',
-    ];
+    protected $table = 'products';
+    protected $guarded = false;
 
-    public function getRelatedBrand() : object | null
+    public function brand() : BelongsTo
     {
-        return \App\Models\Brand::where('id', '=', $this->brand_id)->first();
+        return $this->belongsTo(Brand::class, 'brand_id', 'id');
     }
 
-    public function getRelatedCategory() : object | null
+    public function category() : BelongsTo
     {
-        return \App\Models\Category::where('id', '=', $this->category_id)->first();
+        return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
-    public function brand() : HasOne
+    public function productImages() : HasMany
     {
-        return $this->hasOne(Brand::class, 'id', 'brandId');
-    }
-
-    public function category() : HasOne
-    {
-        return $this->hasOne(Category::class, 'id', 'categoryId');
+        return $this->hasMany(ProductImage::class);
     }
 }
