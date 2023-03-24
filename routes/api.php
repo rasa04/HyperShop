@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\BlogController;
 use App\Http\Controllers\API\IndexController;
+use App\Http\Controllers\API\FilterListController;
 use App\Http\Controllers\API\StoreController;
 
 use App\Http\Controllers\API\ProductController;
@@ -26,17 +27,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::controller(IndexController::class)->group(function () {
-    Route::get('/', 'main')->name('main');
-    Route::get('/cart', 'cart')->name('cart');
-    Route::get('/checkout', 'checkout')->name('checkout');
-    Route::get('/contact', 'contact')->name('contact');
+Route::prefix('/products')->group(function () {
+    Route::get('/filters',FilterListController::class);
+    Route::post('/', [ProductController::class, 'index']);
+    Route::get('/{product}', [ProductController::class, 'show']);
 });
 
-Route::controller(ProductController::class)->group(function () {
-    Route::get('/products', 'index')->name('products.index');
-    Route::get('/products/{product}', 'show')->name('products.show');
-});
 Route::controller(BrandController::class)->group(function () {
     Route::get('/brands', 'index')->name('brands.index');
     Route::get('/brands/{brand}', 'show')->name('brands.show');
