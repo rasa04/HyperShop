@@ -18,14 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
 
-    protected $guarded = false;
-
-//    protected $fillable = [
-//        'display_name',
-//        'username',
-//        'email',
-//        'password',
-//    ];
+    protected $fillable = [
+        'display_name',
+        'username',
+        'email',
+        'password',
+    ];
 
     // Получение название гендера вместо цифр
     const GENDER_MALE = 1;

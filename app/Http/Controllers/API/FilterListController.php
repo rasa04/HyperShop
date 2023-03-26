@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Resources\BrandResource;
+use App\Http\Resources\CategoryResource;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Http\JsonResponse;
 
 class FilterListController
 {
-    public function __invoke(Product $product)
+    public function __invoke(Product $product) : JsonResponse
     {
-        $categories = Category::all();
-        $brands = Brand::all();
+        $categories = CategoryResource::collection(Category::all());
+        $brands = BrandResource::collection(Brand::all());
 
         $maxPrice = Product::orderBy('price', 'DESC')->first()->price;
         $minPrice = Product::orderBy('price', 'ASC')->first()->price;

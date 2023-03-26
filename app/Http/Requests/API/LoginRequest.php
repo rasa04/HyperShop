@@ -3,8 +3,9 @@
 namespace App\Http\Requests\API;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class IndexRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +23,9 @@ class IndexRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'categories' => 'nullable|array',
-            'brands' => 'nullable|array',
-            'prices' => 'nullable|array',
-            'page' => 'nullable|integer',
-            'id' => 'nullable|array'
+            "username" => "required_without:email|string|max:30",
+            "email" => "required_without:username|string|max:50",
+            "password" => "required|string|min:5|max:80",
         ];
     }
 }
