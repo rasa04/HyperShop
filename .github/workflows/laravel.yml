@@ -38,8 +38,9 @@ jobs:
 #    - name: Execute tests (Unit and Feature tests) via PHPUnit
 #      env:
 #        DB_CONNECTION: sqlite
-#        DB_DATABASE: database/database.sqlite
-#      run: vendor/bin/phpunit
+#        DB_DATABASE: server/database/database.sqlite
+#      run: server/vendor/bin/phpunit
 #      working-directory: ${{env.working-directory}}
-#    - name: Server
-#      run: php artisan serve
+    - name: Server
+      run: php artisan serve
+      working-directory: ${{env.working-directory}}
