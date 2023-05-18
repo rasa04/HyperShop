@@ -20,7 +20,7 @@
 import LeftSideBar from "@/components/partials/LeftSideBar.vue";
 import Product from "@/components/Product/Product.vue";
 import PaginationComponent from "@/components/partials/UI/PaginationComponent.vue";
-import { useProductsStore } from "../../stores/ProductsStore";
+import { useProductsStore } from "@/stores/ProductsStore";
 
 export default {
   name: "Products",
@@ -41,10 +41,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.active {
-  color: goldenrod;
-  font-weight: bold;
-}
-</style>

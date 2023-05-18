@@ -4,7 +4,7 @@
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <RouterLink :to="{name: 'home'}" class="flex items-center">
-            <img src="/src/assets/images/home/logo.png" class="h-16 mr-3" alt="FlowBite Logo" />
+            <img src="@/assets/images/home/logo.png" class="h-16 mr-3" alt="FlowBite Logo" />
           </RouterLink>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

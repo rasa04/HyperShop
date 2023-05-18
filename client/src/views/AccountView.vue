@@ -76,7 +76,7 @@ export default {
           "Content-Type": "application/json",
         }
       }
-      axios.post('http://127.0.0.1:8000/api/logout', {}, config)
+      axios.post(`${import.meta.env.VITE_API_URL}/api/logout`, {}, config)
       .then(response => {
         console.log(response)
       })
@@ -97,7 +97,7 @@ export default {
         "Content-Type": "application/json",
       }
     }
-    axios.get('http://127.0.0.1:8000/api/users', config).then(response => {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/users`, config).then(response => {
       this.user = response.data.data
       console.log(this.user)
     }).catch(error => {

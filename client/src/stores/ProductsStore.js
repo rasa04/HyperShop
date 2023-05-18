@@ -14,7 +14,7 @@ export const useProductsStore = defineStore('Products', {
     actions: {
         refreshProducts() {
             try {
-                axios.get('http://127.0.0.1:8000/api/products', {
+                axios.get(`${import.meta.env.VITE_API_URL}/api/products`, {
                     params: {
                     'categories': this.categoriesFilter,
                     'brands': this.brandsFilter,

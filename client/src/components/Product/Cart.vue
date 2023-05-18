@@ -15,7 +15,7 @@
         <tbody>
         <tr v-for="product in this.products" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
           <td class="w-32 p-4">
-            <img v-if="product.product_images.length > 0" :src="`http://127.0.0.1:8000/storage/${product.product_images[0].url}`" alt="Apple Watch">
+            <img v-if="product.product_images.length > 0" :src="`${this.VITE_API_URL}/storage/${product.product_images[0].url}`" alt="Apple Watch">
           </td>
           <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">{{ product.name }}</td>
           <td class="px-6 py-4">
@@ -188,7 +188,8 @@ export default {
   data() {
     return {
       cart: {},
-      products: {}
+      products: {},
+      VITE_API_URL: import.meta.env.VITE_API_URL
     }
   },
 
@@ -198,7 +199,7 @@ export default {
       if (!this.cart) return;
       let temp = []
       this.cart.forEach(item => temp.push(item.id))
-      axios.get('http://127.0.0.1:8000/api/products', { params: {'id': temp}})
+      axios.get(`${this.VITE_API_URL}/api/products`, { params: {'id': temp}})
           .then((response) => {
         this.products = response.data.data
         this.products.forEach(product => {
