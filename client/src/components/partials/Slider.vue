@@ -63,12 +63,9 @@
 </template>
 
 <script>
-import {initFlowbite} from "flowbite";
 
 export default {
   name: "Slider",
-
-
 }
 </script>
 

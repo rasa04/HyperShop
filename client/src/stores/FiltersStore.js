@@ -9,7 +9,7 @@ export const useFiltersStore = defineStore('Filters', {
 
     actions: {
         getFilterList() {
-            axios.get('http://127.0.0.1:8000/api/filters').then(response => {
+            axios.get(`${import.meta.env.VITE_API_URL}/api/filters`).then(response => {
                 this.filterList = response.data
             })
         },

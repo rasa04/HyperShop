@@ -19,7 +19,7 @@ import PaginationComponent from "@/components/partials/UI/PaginationComponent.vu
 import RecommendedItems from "@/components/partials/RecommendedItems.vue";
 import LeftSideBar from "@/components/partials/LeftSideBar.vue";
 import Product from "@/components/Product/Product.vue";
-import { useProductsStore } from "../../stores/ProductsStore";
+import { useProductsStore } from "@/stores/ProductsStore";
 
 export default {
   name: "Main",

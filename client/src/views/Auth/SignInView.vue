@@ -92,7 +92,7 @@ export default {
       }
       // ES10 CODE
       let data = Object.fromEntries(Object.entries(this.credentials).filter(([_, field]) => field !== null))
-      axios.post('http://127.0.0.1:8000/api/login', data, config).then(res => {
+      axios.post(`${import.meta.env.VITE_API_URL}/api/login`, data, config).then(res => {
         localStorage.setItem('TOKEN', res.data.data.token)
         router.push({name: 'home'})
       }).catch(error => {

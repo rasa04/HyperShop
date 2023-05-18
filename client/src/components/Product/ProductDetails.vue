@@ -4,11 +4,11 @@
       <LeftSideBar />
       <div class="col-span-3" v-if="!isProductFetching">
         <div v-if="product.product_images.length" class="md:flex items-center my-12">
-          <img :src="`http://127.0.0.1:8000/storage/${product.product_images[0].url}`"
+          <img :src="`${this.VITE_API_URL}/storage/${product.product_images[0].url}`"
                class="md:w-1/2 max-md:w-full hover:md:scale-110 transition duration-800" alt="" />
           <div class="w-1/2 p-1 grid grid-cols-3 gap-2" id="similar_products">
             <div v-for="image in product.product_images" class="text-center">
-              <img class="hover:md:scale-110" :src="`http://127.0.0.1:8000/storage/${image.url}`" alt="" />
+              <img class="hover:md:scale-110" :src="`${this.VITE_API_URL}/storage/${image.url}`" alt="" />
               <p>{{ product.name }}</p>
             </div>
           </div>
@@ -156,7 +156,8 @@ export default {
     return {
       product: {},
       isProductFetching: true,
-      stateOfTabs: [true, false, false]
+      stateOfTabs: [true, false, false],
+      VITE_API_URL: import.meta.env.VITE_API_URL
     }
   },
 
@@ -170,7 +171,7 @@ export default {
   },
 
   created() {
-    axios.get(`http://127.0.0.1:8000/api/products/${this.$route.params.id}`).then((response) => {
+    axios.get(`${this.VITE_API_URL}/api/products/${this.$route.params.id}`).then((response) => {
       this.isProductFetching = false
       this.product = response.data.data
       console.log(this.product)

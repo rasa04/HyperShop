@@ -4,8 +4,8 @@
       <RouterLink :to="{name: 'product', params: {id: product.id}}">
         <img v-if="product.product_images.length"
              class="w-screen p-2 rounded-lg hover:scale-110 transition duration-200"
-             :src="`http://127.0.0.1:8000/storage/${product.product_images[0].url}`" :alt="product.name" />
-        <img class="w-screen p-2 rounded-lg hover:scale-110 transition duration-200"
+             :src="`${this.VITE_API_URL}/storage/${product.product_images[0].url}`" :alt="product.name" />
+        <img alt="" class="w-screen p-2 rounded-lg hover:scale-110 transition duration-200"
              src="https://via.placeholder.com/360x360.png/000000?text=NO+IMAGE" v-else>
       </RouterLink>
       <p class="flex justify-center items-center text-lime-800 font-bold text-lg">{{ product.name }}</p>
@@ -63,15 +63,13 @@
 </template>
 
 <script>
-
-import {formToJSON} from "axios";
-
 export default {
   name: "Product",
 
   data() {
     return {
-      aboutState: false
+      aboutState: false,
+      VITE_API_URL: import.meta.env.VITE_API_URL
     }
   },
 
@@ -102,7 +100,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-
-</style>

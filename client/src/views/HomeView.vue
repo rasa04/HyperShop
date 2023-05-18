@@ -13,7 +13,7 @@ export default {
     Main
   },
   mounted() {
-      initFlowbite()
+    initFlowbite()
   }
 }
 </script>

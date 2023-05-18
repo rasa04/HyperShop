@@ -17,7 +17,7 @@
 </template>
 <script>
 import axios from "axios";
-import { useProductsStore } from "../../../stores/ProductsStore";
+import { useProductsStore } from "@/stores/ProductsStore";
 
 export default {
   name: "PaginationComponent",
