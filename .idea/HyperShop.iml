@@ -8,6 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/server/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/rap2hpoutre/fast-excel" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/openspout/openspout" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/moonshine/moonshine" />
+      <excludeFolder url="file://$MODULE_DIR$/server/vendor/lee-to/laravel-package-command" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

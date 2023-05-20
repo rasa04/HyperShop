@@ -20,4 +20,9 @@ class Brand extends Model
     {
         return $this->hasMany(Product::class, 'id');
     }
+
+    public function products_amount(): int
+    {
+        return $this->hasMany(Product::class, 'id')->count();
+    }
 }
