@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3916ead6-ea70-44c8-a944-943781b231f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/HyperShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HyperShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Home/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home/Main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Product/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Product/Cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Product/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Product/Product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Product/ProductDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Product/ProductDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Product/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Product/Products.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/partials/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/partials/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/partials/Slider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/partials/Slider.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/partials/UI/PaginationComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/partials/UI/PaginationComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stores/FiltersStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stores/FiltersStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stores/ProductsStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stores/ProductsStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/AccountView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/AccountView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Auth/SignInView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Auth/SignInView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/Models/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/Models/Brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +135,10 @@
       <path value="$PROJECT_DIR$/server/vendor/league/config" />
       <path value="$PROJECT_DIR$/server/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/server/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/server/vendor/rap2hpoutre/fast-excel" />
+      <path value="$PROJECT_DIR$/server/vendor/openspout/openspout" />
+      <path value="$PROJECT_DIR$/server/vendor/moonshine/moonshine" />
+      <path value="$PROJECT_DIR$/server/vendor/lee-to/laravel-package-command" />
     </include_path>
   </component>
   <component name="ProjectId" id="2On4OhdkIDab97a9cwnpSKTGiAQ" />
@@ -151,20 +146,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/WEB/LARAVEL/hyperShop/HyperShop/client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WEB/LARAVEL/hyperShop/HyperShop/client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WEB\LARAVEL\hyperShop\HyperShop\client" />
@@ -184,7 +179,8 @@
       <workItem from="1683997410274" duration="767000" />
       <workItem from="1684151428677" duration="3263000" />
       <workItem from="1684260676490" duration="1546000" />
-      <workItem from="1684432137688" duration="5816000" />
+      <workItem from="1684432137688" duration="7040000" />
+      <workItem from="1684562567392" duration="12180000" />
     </task>
     <servers />
   </component>
